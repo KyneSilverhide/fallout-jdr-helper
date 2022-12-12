@@ -19,17 +19,17 @@ import {METALARMOR_LOOT_DATA_IT, METALARMOR_LOOT_DEF_IT} from "./metal-armor-loo
 import {COMBATARMOR_LOOT_DATA_IT, COMBATARMOR_LOOT_DEF_IT} from "./combat-armor-loot";
 import {DOGARMOR_LOOT_DATA_IT, DOGARMOR_LOOT_DEF_IT} from "./dogarmor-loot";
 import {ROBOTARMOR_LOOT_DATA_IT, ROBOTARMOR_LOOT_DEF_IT} from "./robot-armor-loot";
-import {RECIPE_DEF_IT} from "../../recipes/en/recipes";
+import {RECIPE_DEF_IT} from "../../recipes/it/recipes";
 import {Section} from "../../generic-data-lang";
-import {RECIPE_FOOD_STATION_IT} from "../../recipes/en/recipe-food";
-import {RECIPE_ARMOR_STATION_IT} from "../../recipes/en/recipe-armors";
-import {RECIPE_CHEMISTRY_STATION_IT} from "../../recipes/en/recipe-chemistry";
-import {RECIPE_ROBOT_STATION_IT} from "../../recipes/en/recipe-robot";
-import {RECIPE_POWERARMOR_STATION_IT} from "../../recipes/en/recipe-powerarmor";
-import {RECIPE_LIGHTWEAPONS_STATION_IT} from "../../recipes/en/recipe-lightweapons";
-import {RECIPE_ITERGYWEAPONS_STATION_IT} from "../../recipes/en/recipe-energyweapons";
-import {RECIPE_HEAVYWEAPONS_STATION_IT} from "../../recipes/en/recipe-heavyweapons";
-import {RECIPE_MELEEWEAPONS_STATION_IT} from "../../recipes/en/recipe-meleeweapons";
+import {RECIPE_FOOD_STATION_IT} from "../../recipes/it/recipe-food";
+import {RECIPE_ARMOR_STATION_IT} from "../../recipes/it/recipe-armors";
+import {RECIPE_CHEMISTRY_STATION_IT} from "../../recipes/it/recipe-chemistry";
+import {RECIPE_ROBOT_STATION_IT} from "../../recipes/it/recipe-robot";
+import {RECIPE_POWERARMOR_STATION_IT} from "../../recipes/it/recipe-powerarmor";
+import {RECIPE_LIGHTWEAPONS_STATION_IT} from "../../recipes/it/recipe-lightweapons";
+import {RECIPE_ITERGYWEAPONS_STATION_IT} from "../../recipes/it/recipe-energyweapons";
+import {RECIPE_HEAVYWEAPONS_STATION_IT} from "../../recipes/it/recipe-heavyweapons";
+import {RECIPE_MELEEWEAPONS_STATION_IT} from "../../recipes/it/recipe-meleeweapons";
 import {VAULTSEC_ARMOR_LOOT_DATA_IT, VAULTSEC_LOOT_DEF_IT} from "./vaultsecurity-armor-loot";
 import {POWERARMOR_LOOT_DATA_IT, POWERRMOR_LOOT_DEF_IT} from "./power-armor-loot";
 

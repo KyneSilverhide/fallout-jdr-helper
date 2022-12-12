@@ -42,6 +42,7 @@ import {DOGARMOR_LOOT_DATA_FR} from "./items/fr/dogarmor-loot";
 import {DOGARMOR_LOOT_DATA_EN} from "./items/en/dogarmor-loot";
 import {ROBOTARMOR_LOOT_DATA_FR} from "./items/fr/robot-armor-loot";
 import {ROBOTARMOR_LOOT_DATA_EN} from "./items/en/robot-armor-loot";
+import {REGISTERED_DATA_SECTIONS_IT} from "./items/it/generic-data";
 
 export interface DataTableDefinition {
   column: string,
@@ -66,7 +67,8 @@ export interface Section {
 
 export const REGISTERED_DATA_SECTIONS = {
   "fr": REGISTERED_DATA_SECTIONS_FR,
-  "en": REGISTERED_DATA_SECTIONS_EN
+  "en": REGISTERED_DATA_SECTIONS_EN,
+  "it": REGISTERED_DATA_SECTIONS_IT
 }
 
 export const AMMUNITION_LOOT_DATA = {
