@@ -124,7 +124,7 @@
     "TORSO": "sur Torse"
   },
   "PERKS": {
-    "INFO": "Renseigner les stats pour voir les compétences accessibles",
+    "INFO": "Renseigner les stats pour voir les compétences accessibles.",
     "SEARCH": "Rechercher",
     "FILTER": "Filtrer les résultats...",
     "STRENGTH": "Force",
@@ -136,7 +136,12 @@
     "LUCK": "Chance",
     "LEVEL": "Niveau",
     "CANTROBOT": "Inaccessible au robot",
-    "RANKTRESHOLD": " par rang"
+    "CANTCOMPANION": "Inaccessible si vous avez déjà un compagnon allié",
+    "RANKTRESHOLD": " par rang",
+    "SOURCES" : {
+      "CRB": "Livre de base",
+      "SETTLERS" : "Guide des colonies"
+    }
   },
   "BESTIARY": {
     "CREATURE": "Créature",

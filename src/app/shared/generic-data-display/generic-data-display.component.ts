@@ -1,10 +1,10 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {ModalController} from "@ionic/angular";
-import {ModsDisplayModalComponent} from "../mods-display-modal/mods-display-modal.component";
-import {DataId, DataTableDefinition} from "../../data/generic-data-lang";
-import {TranslateService} from "@ngx-translate/core";
-import {RECIPE_DEF, RECIPES} from "../../data/recipes/recipes-lang";
-import {LanguageService} from "../language.service";
+import {ModalController} from '@ionic/angular';
+import {ModsDisplayModalComponent} from '../mods-display-modal/mods-display-modal.component';
+import {DataId, DataTableDefinition} from '../../data/generic-data-lang';
+import {TranslateService} from '@ngx-translate/core';
+import {RECIPE_DEF, RECIPES} from '../../data/recipes/recipes-lang';
+import {LanguageService} from '../language.service';
 
 @Component({
   selector: 'app-generic-data-display',
@@ -12,6 +12,14 @@ import {LanguageService} from "../language.service";
   styleUrls: ['./generic-data-display.component.scss'],
 })
 export class GenericDataDisplayComponent implements OnInit {
+  @Input() genericItems: any[];
+
+  @Input() dataId: DataId;
+  @Input() displayRecipe = false;
+  @Input() displayTitle = true;
+
+  matchingRecipes: { [key: string]: any[] } = {};
+
 
   constructor(private modalCtrl: ModalController, private translate: TranslateService, private languageService: LanguageService) {
   }
@@ -19,7 +27,7 @@ export class GenericDataDisplayComponent implements OnInit {
   ngOnInit() {
     if (this.displayRecipe) {
       this.genericItems.forEach(value => {
-        const itemName = value['Name'];
+        const itemName = value.Name;
         const matchingRecipe = this.findMatchingRecipe(itemName);
         if (matchingRecipe != null) {
           this.matchingRecipes[itemName] = [matchingRecipe];
@@ -28,25 +36,18 @@ export class GenericDataDisplayComponent implements OnInit {
     }
   }
 
-  @Input() genericItems: any[];
-
-  @Input() dataId: DataId;
-  @Input() displayRecipe: boolean = false;
-  @Input() displayTitle: boolean = true;
-
-  matchingRecipes: { [key: string]: any[] } = {};
 
   async openModModal(itemName) {
     const modal = await this.modalCtrl.create({
       component: ModsDisplayModalComponent,
-      componentProps: {itemName: itemName, itemType: this.dataId.type}
+      componentProps: {itemName, itemType: this.dataId.type}
     });
     await modal.present();
     await modal.onWillDismiss();
   }
 
   isOptional(column: DataTableDefinition, value: string) {
-    return value && column.column.startsWith("Effect") && value === '';
+    return value && column.column.startsWith('Effect') && value === '';
   }
 
   getComponents(complexity: number, extraOnTorso: boolean): string {
@@ -73,8 +74,8 @@ export class GenericDataDisplayComponent implements OnInit {
     let matchingRecipe: any = null;
     RECIPES.forEach(recipeType => {
       const candidatesRecipes = recipeType[this.languageService.getCurrentLanguage()];
-      for (let candidatesRecipe of candidatesRecipes) {
-        if (candidatesRecipe['Name'].toLowerCase().endsWith(itemName.toLowerCase())) {
+      for (const candidatesRecipe of candidatesRecipes) {
+        if (candidatesRecipe.Name.toLowerCase().endsWith(itemName.toLowerCase())) {
           matchingRecipe = candidatesRecipe;
           break;
         }

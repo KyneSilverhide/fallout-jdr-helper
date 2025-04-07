@@ -2,9 +2,10 @@ import {Component, OnInit} from '@angular/core';
 
 import {Platform} from '@ionic/angular';
 import {SplashScreen} from '@capacitor/splash-screen';
-import {TranslateService} from "@ngx-translate/core";
-import {LanguageService} from "./shared/language.service";
-import {DataId, REGISTERED_DATA_SECTIONS, Section} from "./data/generic-data-lang";
+import {TranslateService} from '@ngx-translate/core';
+import {LanguageService} from './shared/language.service';
+import {DataId, REGISTERED_DATA_SECTIONS, Section} from './data/generic-data-lang';
+import { findIndex } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -46,13 +47,13 @@ export class AppComponent implements OnInit {
   private buildMenu(labelKey, type, icon): DataId {
     return {
       label: this.translate.instant('APP.MENU.' + labelKey),
-      type: type,
-      icon: icon,
+      type,
+      icon,
       data: [],
       definition: [],
       generic: false,
       moddable: false
-    }
+    };
   }
 
   private buildNavigation() {
@@ -79,6 +80,9 @@ export class AppComponent implements OnInit {
       ]
     });
     this.sections = [...this.sections, ...REGISTERED_DATA_SECTIONS[this.currentLanguage]];
+
+    // exclude Perks from sections -> managed in top section
+    this.sections.splice(this.sections.findIndex((s) => s.label === 'perks'), 1);
   }
 
   changeLanguage(event) {

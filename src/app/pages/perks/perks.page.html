@@ -48,8 +48,26 @@
         <ion-checkbox type="checkbox" aria-label='MIND' name="mind" 
                       label-placement="stacked" alignment="center" 
                       fill="outline" (ionChange)="search()" [(ngModel)]="isRobot">
-          Robot
+          Robot ?
         </ion-checkbox>
+      </ion-col>
+      <ion-col>
+        <ion-checkbox type="checkbox" aria-label='MIND' name="mind" label-placement="stacked" alignment="center"
+          fill="outline" (ionChange)="search()" [(ngModel)]="isCompanion">
+          Compagnon ?
+        </ion-checkbox>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-item>
+            <ion-select aria-label="sources" placeholder="Sélectionner une source" [(ngModel)]="sources" [multiple]="true" interface="popover" (ionChange)="search()">
+              <ion-select-option value="CRB">Livre de base</ion-select-option>
+              <ion-select-option value="SETTLERS">Guide des colonies</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
       </ion-col>
     </ion-row>
 
@@ -58,7 +76,7 @@
 
     <ion-list>
       <ng-container *ngFor="let perk of filteredResult">
-        <ion-list-header><h1>{{ perk.name }}</h1></ion-list-header>
+        <ion-list-header><h1>{{ perk.Name }}</h1></ion-list-header>
         <p>
           <strong>Rangs</strong> : {{ perk.ranks }} <br />
           <strong>Niveau</strong> : {{ perk.ranks === 1 ? 
@@ -73,10 +91,12 @@
           {{ perk.i === 0 ? "" : ("PERKS.INTELLIGENCE" | translate) + " " + perk.i + " ; "}}
           {{ perk.a === 0 ? "" : ("PERKS.AGILITY" | translate) + " " + perk.a + " ; "}}
           {{ perk.l === 0 ? "" : ("PERKS.LUCK" | translate) + " " + perk.l + " ; "}}
-          {{ perk.canRobot ? "" : ("PERKS.CANTROBOT" | translate)+ " ; "}}<br/>
+          {{ perk.canRobot ? "" : ("PERKS.CANTROBOT" | translate)+ " ; "}}
+          {{ perk.canCompanion ? "" : ("PERKS.CANTCOMPANION" | translate)+ " ; "}}<br /> <br />
           <strong>Description</strong> :
           <app-rich-text-display [propertyText]="perk.description"></app-rich-text-display>
-          <br/>
+          <br/><br/>
+          <i><sub>Source : {{ perk.source === "CRB" ? ("PERKS.SOURCES.CRB" | translate) :("PERKS.SOURCES.SETTLERS" | translate) }}</sub></i>
         </p>
       </ng-container>
     </ion-list>

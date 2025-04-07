@@ -1,44 +1,46 @@
-import {AMMUNITION_LOOT_DATA_FR, AMMUNITION_LOOT_DEF_FR} from "./munition-loot";
-import {SYRINGE_LOOT_DATA_FR, SYRINGE_TYPE_DEF_FR} from "./syringe-type";
-import {DRINK_LOOT_DATA_FR, DRINK_LOOT_DEF_FR} from "./drink-loot";
-import {TOOLS_LOOT_DATA_FR, TOOLS_LOOT_DEF_FR} from "./tools-loot";
-import {FOOD_LOOT_DATA_FR, FOOD_LOOT_DEF_FR} from "./food-loot";
-import {CHEMS_LOOT_DATA_FR, CHEMS_LOOT_DEF_FR} from "./chems-loot";
-import {LIGHTWEAPONS_LOOT_DATA_FR, LIGHTWEAPONS_LOOT_DEF_FR} from "./lightweapons-loot";
-import {ENERGYWEAPONS_LOOT_DATA_FR, ENERGYWEAPONS_LOOT_DEF_FR} from "./energyweapons-loot";
-import {MELEEWEAPONS_LOOT_DATA_FR, MELEEWEAPONS_LOOT_DEF_FR} from "./meleeweapons-loot";
-import {HEAVYWEAPONS_LOOT_DATA_FR, HEAVYWEAPONS_LOOT_DEF_FR} from "./heavyweapons-loot";
-import {EXPLOSIVES_LOOT_DATA_FR, EXPLOSIVES_LOOT_DEF_FR} from "./explosives-loot";
-import {PROJECTILES_LOOT_DATA_FR, PROJECTILES_LOOT_DEF_FR} from "./projectiles-loot";
-import {OUTFITS_LOOT_DATA_FR, OUTFITS_LOOT_DEF_FR} from "./outfits-loot";
-import {HATS_LOOT_DATA_FR, HATS_LOOT_DEF_FR} from "./hats-loot";
-import {LEATHERARMOR_LOOT_DATA_FR, LEATHERARMOR_LOOT_DEF_FR} from "./leatherarmor-loot";
-import {SYNTHARMOR_LOOT_DATA_FR, SYNTHARMOR_LOOT_DEF_FR} from "./syntharmor-loot";
-import {VAULTSEC_ARMOR_LOOT_DATA_FR, VAULTSEC_LOOT_DEF_FR} from "./vaultsecurity-armor-loot";
-import {RAIDERARMOR_LOOT_DATA_FR, RAIDERARMOR_LOOT_DEF_FR} from "./looterarmor-loot";
-import {METALARMOR_LOOT_DATA_FR, METALARMOR_LOOT_DEF_FR} from "./metal-armor-loot";
-import {COMBATARMOR_LOOT_DATA_FR, COMBATARMOR_LOOT_DEF_FR} from "./combat-armor-loot";
-import {DOGARMOR_LOOT_DATA_FR, DOGARMOR_LOOT_DEF_FR} from "./dogarmor-loot";
-import {POWERARMOR_LOOT_DATA_FR, POWERRMOR_LOOT_DEF_FR} from "./power-armor-loot";
-import {ROBOTARMOR_LOOT_DATA_FR, ROBOTARMOR_LOOT_DEF_FR} from "./robot-armor-loot";
+import {AMMUNITION_LOOT_DATA_FR, AMMUNITION_LOOT_DEF_FR} from './munition-loot';
+import {SYRINGE_LOOT_DATA_FR, SYRINGE_TYPE_DEF_FR} from './syringe-type';
+import {DRINK_LOOT_DATA_FR, DRINK_LOOT_DEF_FR} from './drink-loot';
+import {TOOLS_LOOT_DATA_FR, TOOLS_LOOT_DEF_FR} from './tools-loot';
+import {FOOD_LOOT_DATA_FR, FOOD_LOOT_DEF_FR} from './food-loot';
+import {CHEMS_LOOT_DATA_FR, CHEMS_LOOT_DEF_FR} from './chems-loot';
+import {LIGHTWEAPONS_LOOT_DATA_FR, LIGHTWEAPONS_LOOT_DEF_FR} from './lightweapons-loot';
+import {ENERGYWEAPONS_LOOT_DATA_FR, ENERGYWEAPONS_LOOT_DEF_FR} from './energyweapons-loot';
+import {MELEEWEAPONS_LOOT_DATA_FR, MELEEWEAPONS_LOOT_DEF_FR} from './meleeweapons-loot';
+import {HEAVYWEAPONS_LOOT_DATA_FR, HEAVYWEAPONS_LOOT_DEF_FR} from './heavyweapons-loot';
+import {EXPLOSIVES_LOOT_DATA_FR, EXPLOSIVES_LOOT_DEF_FR} from './explosives-loot';
+import {PROJECTILES_LOOT_DATA_FR, PROJECTILES_LOOT_DEF_FR} from './projectiles-loot';
+import {OUTFITS_LOOT_DATA_FR, OUTFITS_LOOT_DEF_FR} from './outfits-loot';
+import {HATS_LOOT_DATA_FR, HATS_LOOT_DEF_FR} from './hats-loot';
+import {LEATHERARMOR_LOOT_DATA_FR, LEATHERARMOR_LOOT_DEF_FR} from './leatherarmor-loot';
+import {SYNTHARMOR_LOOT_DATA_FR, SYNTHARMOR_LOOT_DEF_FR} from './syntharmor-loot';
+import {VAULTSEC_ARMOR_LOOT_DATA_FR, VAULTSEC_LOOT_DEF_FR} from './vaultsecurity-armor-loot';
+import {RAIDERARMOR_LOOT_DATA_FR, RAIDERARMOR_LOOT_DEF_FR} from './looterarmor-loot';
+import {METALARMOR_LOOT_DATA_FR, METALARMOR_LOOT_DEF_FR} from './metal-armor-loot';
+import {COMBATARMOR_LOOT_DATA_FR, COMBATARMOR_LOOT_DEF_FR} from './combat-armor-loot';
+import {DOGARMOR_LOOT_DATA_FR, DOGARMOR_LOOT_DEF_FR} from './dogarmor-loot';
+import {POWERARMOR_LOOT_DATA_FR, POWERRMOR_LOOT_DEF_FR} from './power-armor-loot';
+import {ROBOTARMOR_LOOT_DATA_FR, ROBOTARMOR_LOOT_DEF_FR} from './robot-armor-loot';
 
-import {Section} from "../../generic-data-lang";
-import {RECIPE_DEF_FR} from "../../recipes/fr/recipes";
-import {RECIPE_FOOD_STATION_FR} from "../../recipes/fr/recipe-food";
-import {RECIPE_ARMOR_STATION_FR} from "../../recipes/fr/recipe-armors";
-import {RECIPE_CHEMISTRY_STATION_FR} from "../../recipes/fr/recipe-chemistry";
-import {RECIPE_ROBOT_STATION_FR} from "../../recipes/fr/recipe-robot";
-import {RECIPE_POWERARMOR_STATION_FR} from "../../recipes/fr/recipe-powerarmor";
-import {RECIPE_LIGHTWEAPONS_STATION_FR} from "../../recipes/fr/recipe-lightweapons";
-import {RECIPE_ENERGYWEAPONS_STATION_FR} from "../../recipes/fr/recipe-energyweapons";
-import {RECIPE_HEAVYWEAPONS_STATION_FR} from "../../recipes/fr/recipe-heavyweapons";
-import {RECIPE_MELEEWEAPONS_STATION_FR} from "../../recipes/fr/recipe-meleeweapons";
-import {EFFECT_TYPE_FR, EFFECTS_FR} from "../../rules/fr/effects";
-import {MODIFIERS_FR, MODIFIERS_TYPE_FR} from "../../rules/fr/modifiers";
+import {Section} from '../../generic-data-lang';
+import {RECIPE_DEF_FR} from '../../recipes/fr/recipes';
+import {RECIPE_FOOD_STATION_FR} from '../../recipes/fr/recipe-food';
+import {RECIPE_ARMOR_STATION_FR} from '../../recipes/fr/recipe-armors';
+import {RECIPE_CHEMISTRY_STATION_FR} from '../../recipes/fr/recipe-chemistry';
+import {RECIPE_ROBOT_STATION_FR} from '../../recipes/fr/recipe-robot';
+import {RECIPE_POWERARMOR_STATION_FR} from '../../recipes/fr/recipe-powerarmor';
+import {RECIPE_LIGHTWEAPONS_STATION_FR} from '../../recipes/fr/recipe-lightweapons';
+import {RECIPE_ENERGYWEAPONS_STATION_FR} from '../../recipes/fr/recipe-energyweapons';
+import {RECIPE_HEAVYWEAPONS_STATION_FR} from '../../recipes/fr/recipe-heavyweapons';
+import {RECIPE_MELEEWEAPONS_STATION_FR} from '../../recipes/fr/recipe-meleeweapons';
+import {EFFECT_TYPE_FR, EFFECTS_FR} from '../../rules/fr/effects';
+import {MODIFIERS_FR, MODIFIERS_TYPE_FR} from '../../rules/fr/modifiers';
+
+import { PERKS, PERKS_DEF_FR } from '../../perks/perks';
 
 export const REGISTERED_DATA_SECTIONS_FR: Section[] = [
   {
-    label: "Munitions",
+    label: 'Munitions',
     data: [
       {
         type: 'ammunitions',
@@ -61,7 +63,7 @@ export const REGISTERED_DATA_SECTIONS_FR: Section[] = [
     ]
   },
   {
-    label: "Consommables",
+    label: 'Consommables',
     data: [
       {
         type: 'drinks',
@@ -93,7 +95,7 @@ export const REGISTERED_DATA_SECTIONS_FR: Section[] = [
     ]
   },
   {
-    label: "Autres",
+    label: 'Autres',
     data: [
       {
         type: 'tools',
@@ -107,7 +109,7 @@ export const REGISTERED_DATA_SECTIONS_FR: Section[] = [
     ]
   },
   {
-    label: "Armes",
+    label: 'Armes',
     data: [
       {
         type: 'light-weapons',
@@ -166,7 +168,7 @@ export const REGISTERED_DATA_SECTIONS_FR: Section[] = [
     ]
   },
   {
-    label: "Armures",
+    label: 'Armures',
     data: [
       {
         type: 'outfits',
@@ -270,7 +272,7 @@ export const REGISTERED_DATA_SECTIONS_FR: Section[] = [
     ]
   },
   {
-    label: "Recettes",
+    label: 'Recettes',
     data: [
       {
         type: 'recipe-food-station',
@@ -356,7 +358,7 @@ export const REGISTERED_DATA_SECTIONS_FR: Section[] = [
     ]
   },
   {
-    label: "Règles",
+    label: 'Règles',
     data: [
       {
         type: 'effects',
@@ -378,5 +380,18 @@ export const REGISTERED_DATA_SECTIONS_FR: Section[] = [
       }
     ]
   },
-
+{
+    label: 'Perks',
+    data: [
+      {
+        type: 'perks',
+        label: 'Perks',
+        icon: 'bulb',
+        definition: PERKS_DEF_FR,
+        data: PERKS,
+        generic: false,
+        moddable: false
+      }
+    ]
+  }
 ];
